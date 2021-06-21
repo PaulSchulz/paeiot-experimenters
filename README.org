@@ -1,0 +1,26 @@
+* paeiot-experimenters
+Repository with resources for the Port Adelaide Enfield Library IoT Experimenters Group
+
+** Introduction
+
+The Port Adelaide Enfield Library IoT Experimenters are a group that is meeting
+at the Greenacres Library on the *3rd Sunday of the Month* to discuss and learn
+about Internet of Things based projects, and learn from each other while doing
+and building interesting things.
+
+More details about the group and some of the projects being worked on, can found
+on the [[https://stemlibrary.space/iot/][STEM Library Website]].
+
+Anyone is welcome to join the group. There is a [[https://iotexperimenter.slack.com/][Slack Channel]] for online discussion.
+
+This repository (and it's clones) are for shared group resources, which may
+include such things as:
+
+- Useful (and tested) Arduino scripts and recipes.
+- Hints and Tips
+- Hardware recommendations
+
+Everyone is welcome to contribute to this shared repository. I welcome
+suggestions, and especially 'pull requests'. (Send me a message if you need me
+to explain what this is or how to send me one.)
+
