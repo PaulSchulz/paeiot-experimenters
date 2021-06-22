@@ -1,20 +1,22 @@
 [[../../README.org][Top]]
 
 * LoRaWAN Gateways
-/Updated Jun 2021/
+(/Updated Jun 2021)/
 
-The following is a list of commercially available LoRaWAN Gateways which are
+The following is a list of commercially LoRaWAN Gateways which are
 currently available.
 
-** Available Gateways
+** Indoor Gateways
 *** LPS8 Indoor LoRaWAN Gateway
 [[../images/dragino-gateway-lps8-indoor-lorawan-multichannel-gateway.jpg]]
+
 https://www.dragino.com/products/lora-lorawan-gateway/item/148-lps8.html
-Supplier: [[iot-store.com.au/products/lps8-indoor-lorawan-multichannel-gateway][IoT Store]]
+Supplier: [[https://iot-store.com.au/products/lps8-indoor-lorawan-multichannel-gateway][IoT Store]]
 - $185 AUD exc. GST
 
 *** RAK7258 Micro Gateway (Indoor)
 [[../images/rak-wireless-gateway-au-915-mhz-rak7258-lorawan-gateway-sx1301-8-channels-with-wifi.png]]
+
 https://store.rakwireless.com/products/rak7258-micro-gateway
 Suppier: [[https://store.rakwireless.com/products/rak7258-micro-gateway][RAK Wireless]]
 - $149 USD - Non-LTE
@@ -24,6 +26,7 @@ Supplier: [[https://www.iot-store.com.au/search?type=product&q=rak7258][IoT Stor
 
 *** RAK7268 WisGate Edge Lite 2 (*NEW,* Indoor)
 [[../images/rak-wireless-gateway-rakwireless-wisgate-edge-lite-2-lorawan-gateway.png]]
+
 https://docs.rakwireless.com/Product-Categories/WisGate/RAK7268/Overview/
 Supplier: [[https://store.rakwireless.com/collections/wisgate-edge/products/wisgate-edge-lite-2-rak7268-rak7268c][RAK Wireless]]
 - $139 USD - Non-LTE

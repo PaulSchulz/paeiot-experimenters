@@ -1,0 +1,26 @@
+[[../../README.org][Top]]
+
+* Suppliers
+** IoT Store (online)
+- [[https://www.iot-store.com.au/][Website]]
+
+This online shop (based in Perth) has a really large range of IoT related
+devices, modules and widgets etc.
+
+Prices are in Australian Dollars (AUD).
+
+** Jaycar Electronics
+- [[https://www.jaycar.com.au/][Website]]
+
+Good place to pickup Arduino modules and reference books.
+
+** Altronics
+- [[https://www.altronics.com.au/][Website]]
+- Address: 4/316 Main N Rd, Prospect SA 5082
+
+Good for Raspberry Pi and accessories.
+
+** Aztronics Enfield
+- Website: [[Website][Aztronics Adelaide]]
+- Address: 470A Main N Rd, Blair Athol SA 5084
+- Phone: (08) 8349 6340
