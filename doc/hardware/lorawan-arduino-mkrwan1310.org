@@ -1,0 +1,16 @@
+[[../../README.org][Top]]
+
+* Arduino MLR-WAN-1310
+
+[[https://store.arduino.cc/usa/mkr-wan-1310][Arduno Store]]
+- $38 USB 
+
+This Arduino module is based on the *Microchip SAMD21* low power processor
+together with the *Murata CMWX1ZZABZ LoRa module*. It comes with an integrated
+battery charger, 2MByte SPI Flash and configuration options for low power
+operation.
+
+[[../images/Pinout-MKRwan1310_latest.png]]
+
+*** Getting Started
+[[https://www.arduino.cc/en/Guide/MKRWAN1310][Arduino Tutorial]]
