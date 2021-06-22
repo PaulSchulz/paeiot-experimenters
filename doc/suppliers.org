@@ -11,11 +11,13 @@ Prices are in Australian Dollars (AUD).
 
 ** Jaycar Electronics
 - [[https://www.jaycar.com.au/][Website]]
+- [[https://goo.gl/maps/hPzoMCN7eizNG6mD8][Location]]
 
 Good place to pickup Arduino modules and reference books.
 
 ** Altronics
 - [[https://www.altronics.com.au/][Website]]
+- [[https://g.page/altronics-adelaide?share][Location]]
 - Address: 4/316 Main N Rd, Prospect SA 5082
 
 Good for Raspberry Pi and accessories.
