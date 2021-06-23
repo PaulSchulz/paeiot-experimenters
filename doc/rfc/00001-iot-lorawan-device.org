@@ -1,4 +1,4 @@
-[[../../README.org][Top]] PAEIOT RFC 00001 - IoT LoRaWAN Device Kit
+[[../../README.org][Top]] |  PAEIOT RFC 00001 - IoT LoRaWAN Device Kit
 -----
 * Request for Comment 00001 -  IoT LoRaWAN Device Kit
 
@@ -33,7 +33,7 @@ Things to consider:
 
 - Complete
 
-  When completed, the functionality of the kit should be a complete product (software,
+  When assembled the kit should form a complete finished product (software,
   packaging, documentation). 
 
 ** Specification  
