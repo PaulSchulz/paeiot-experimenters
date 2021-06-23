@@ -8,7 +8,7 @@ Date: Wed, 23 Jun 2021
 
 Status: DRAFT
 
-Keywords: LoRaWAN, Hardware, Sensor, Kit, Battery, Solar Powered
+Keywords: LoRaWAN, Hardware, Sensor, Kit, Battery, Solar Power
 
 ** Introduction
 
@@ -47,12 +47,37 @@ The kit will produce a hardware sensor unit which will:
 - Is programmed via the Arduino IDE (Online - preferred, or Desktop);
 - Uses standard Arduino Libaries, where possible);
 - Use a 3D printed case, which can be produced locally (with available SDL files);
-- Be expandable and adaptable for other projects.
+- Be expandable and adaptable for other projects; and
+- Suitable for outdoor applications.
 
 *** Initial Sensor Options
 - Push button
 - Temperature and Humidity Sensor x 2 (suitable for monitoring nesting boxes)
 - LED Feedback (display downloaded status from LoRaWA Network)
+
+** Component Candidates
+*** Microprocessor Board
+**** Arduino MKR WAN 1310 (current preferred option)
+This board initially appears to support all of the specification requirements.
+[[../hardware/lorawan-arduino-mkrwan1310.org][Details]]
+
+*** Battery - Li-Po 3.7V
+**** Core Electroncs [[https://core-electronics.com.au/polymer-lithium-ion-battery-1000mah-38458.html][LiPo 3.7V 1100mAh]] $15.35
+
+*** Solar Panel
+**** Core Electronics [[https://core-electronics.com.au/monocrystalline-solar-panel-5v-1a.html][Monocrystalline]] $22.69
+- Maximum power: 6W
+- 27.5cm x 17cm
+- 5V 1A
+- Includes voltage regulator with USB adapter underneath
+
+*** Case
+- 3D printed with SDL available
+- Supporting multiple mounting options
+
+*** Additional hardware
+- screws
+- connectors and cables
 
 ** Examples
 
