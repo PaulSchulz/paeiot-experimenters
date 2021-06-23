@@ -1,0 +1,63 @@
+[[../../README.org][Top]] PAEIOT RFC 00001 - IoT LoRaWAN Device Kit
+-----
+* Request for Comment 00001 -  IoT LoRaWAN Device Kit
+
+Author: Paul Schulz <paul@mawsonlakes.org>
+
+Date: Wed, 23 Jun 2021
+
+Status: DRAFT
+
+Keywords: LoRaWAN, Hardware, Sensor, Kit, Battery, Solar Powered
+
+** Introduction
+
+This document describes the specification and construction of a IoT LoRaWAN
+capable device which can be easily constructed from readily available parts. The
+aim of this device is to be a standard unit which can be used (with small
+modifications) as the basis for constructing a large range of IoT devices
+suitable for use by the IoT Experimenters group and beyond.
+
+Things to consider:
+- Cost
+
+  It would be good to produce a low cost kit with more expensive
+  components being optional extras. This will reduce the barrier to entry in the
+  hobby, whether that be via individual purchases, or sponsored group projects.
+
+- Ease of use
+
+  The kit needs to be easy to program and use. This will be achieved by concise
+  documentation on how to enable a basic functionality of the device and allow
+  it to be tested.
+
+- Complete
+
+  When completed, the functionality of the kit should be a complete product (software,
+  packaging, documentation). 
+
+** Specification  
+
+The kit will produce a hardware sensor unit which will:
+
+- Transmit application data to the LoRaWAN network;
+- Include a basic sensor (yet to be decided)
+- Support connectionless operation via battery and solar panel;
+- Support low power operation, for long duration sensing applications;
+- Is programmed via the Arduino IDE (Online - preferred, or Desktop);
+- Uses standard Arduino Libaries, where possible);
+- Use a 3D printed case, which can be produced locally (with available SDL files);
+- Be expandable and adaptable for other projects.
+
+*** Initial Sensor Options
+- Push button
+- Temperature and Humidity Sensor x 2 (suitable for monitoring nesting boxes)
+- LED Feedback (display downloaded status from LoRaWA Network)
+
+** Examples
+
+*** Low Power MKR WAN 1310 IoT Sensor Project
+- Webpage: [[https://create.arduino.cc/projecthub/andreas_waldherr/mkr-wan-1310-iot-operating-at-0-92ma-879793][Arduino Project]]
+
+Good detailed description of a LoRaWAN Sensor, including programming.
+- Uses CBOR data encoding (RFC 8949) [[https://cbor.io/][Concose Binary Object Representation]]

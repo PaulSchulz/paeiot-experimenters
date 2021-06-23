@@ -3,6 +3,7 @@
 * Suppliers
 ** IoT Store (online)
 - [[https://www.iot-store.com.au/][Website]]
+- [[https://www.facebook.com/IoT.Store.Aus/][Facebook]]
 
 This online shop (based in Perth) has a really large range of IoT related
 devices, modules and widgets etc.
