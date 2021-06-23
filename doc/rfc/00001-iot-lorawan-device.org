@@ -2,13 +2,13 @@
 -----
 * Request for Comment 00001 -  IoT LoRaWAN Device Kit
 
-Author: Paul Schulz <paul@mawsonlakes.org>
-
-Date: Wed, 23 Jun 2021
-
-Status: DRAFT
-
-Keywords: LoRaWAN, Hardware, Sensor, Kit, Battery, Solar Power
+|----------+------------------------------------------------------|
+| Author   | Paul Schulz <paul@mawsonlakes.org>                   |
+| Date     | Wed, 23 Jun 2021                                     |
+| Keywords | LoRaWAN, Hardware, Sensor, Kit, Battery, Solar Power |
+| Revision | v1                                                   |
+| Status   | DRAFT                                                |
+|----------+------------------------------------------------------|
 
 ** Introduction
 
