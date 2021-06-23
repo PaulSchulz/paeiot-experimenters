@@ -7,7 +7,7 @@
 | Date     | Wed, 23 Jun 2021                                     |
 | Keywords | LoRaWAN, Hardware, Sensor, Kit, Battery, Solar Power |
 | Revision | v1                                                   |
-| Status   | DRAFT                                                |
+| Status   | Draft                                                |
 |----------+------------------------------------------------------|
 
 ** Introduction
