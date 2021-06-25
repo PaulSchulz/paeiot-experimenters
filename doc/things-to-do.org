@@ -86,7 +86,7 @@ These activities can be thought of as mini-tutorials and how-to's.
 
 *** Fritzing
 
-- Install fritzing.
+- Install [[https://fritzing.org/][fritzing]].
 - Import the MKR-WAN-1310 model (Work in progress)
 
 ** Online Services
