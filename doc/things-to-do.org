@@ -1,0 +1,73 @@
+[[../../README.org][Top]]
+-----
+* Things to do (with..)                                                 :TOC_3:
+  - [[#introduction][Introduction]]
+  - [[#hardware][Hardware]]
+    - [[#arduino][Arduino]]
+    - [[#raspberry-pi][Raspberry Pi]]
+  - [[#software][Software]]
+    - [[#kicad][kicad]]
+    - [[#fritzing][fritzing]]
+  - [[#online-services][Online Services]]
+    - [[#the-things-network][The Things Network]]
+
+** Introduction 
+The following are some suggestions for various IoT related  which can be done
+with hardware or software
+
+(This document is a 'Work in Progress'. Suggestions for additions welcome.)
+
+** Hardware
+*** Arduino
+- Sign up for an [[https://store.arduino.cc/digital/create][Arduino Cloud]] account
+
+  This will enable you to use the Web Editor to create and load programs
+  (sketches) for Arduino devices from within your computers browser.
+
+- Download, Compile and Install an Arduino Sketch onto an Arduino Board
+
+  The Arduino [[https://www.arduino.cc/en/Tutorial/BuiltInExamples/Blink][Blink Sketch]] is available under the available examples and will
+  make the onboard LED blink.
+
+- Modify the Blink Sketch to blink an external LED
+
+  Details are in the Blink Sketch mentioned above.  
+
+- Get an Arduino MKR WAN 1310 board to communicate via LoRaWAN
+
+  This requires an account for "The Things Stack"..
+
+  In the Arduino IDE, install the MKRWAN library. Open the FirstConfiguration
+  sketch. Modify the sketch for the AU915 band plan, compile and install it.
+  Get authorisation details from [[https://www.thethingsnetwork.org/][The Things Network]].
+
+*** Raspberry Pi
+- Download and Install RaspberryPiOS onto an SD Card
+
+  Visit the [[https://www.raspberrypi.org/software/][RaspberryPiOS]] website, and download Raspberry Pi Imager. Other
+  options include downloading an image [[raspberrypi.org/software/operating-systems][directly]] and using software like [[https://www.balena.io/etcher/][Balena
+  Etcher]] to write it to an SD Card.
+
+  There are several other image options available, including Ubuntu, LibreElec,
+  and RetroPi.
+
+- Install NodeRED 
+
+- Connect NodeRED to The Things Network via MQTT
+
+- Play a sound/music on the Raspberry Pi
+
+** Software
+*** kicad
+*** fritzing
+
+** Online Services
+*** The Things Network
+- Register with [[https://id.thethingsnetwork.org/]["The Things ID"]] system to create an account
+
+  This is required for using [[https://www.thethingsnetwork.org/][The Things Network]]
+
+- Create a application with The Things Network
+
+- Register a LoRaWAN device
+
