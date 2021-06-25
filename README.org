@@ -51,4 +51,4 @@ In addition, interest was expressed in
 ** Documentation
 - [[doc/suppliers.org][Suppliers]]
 - [[doc/hardware/][IoT Hardware]]
-- [[doc/things-to-do.doc][Things to do]]
+- [[doc/things-to-do.org][Things to do]]
