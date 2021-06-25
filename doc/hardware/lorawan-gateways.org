@@ -5,7 +5,7 @@
   - [[#indoor-gateways][Indoor Gateways]]
     - [[#lps8-indoor-lorawan-gateway][LPS8 Indoor LoRaWAN Gateway]]
     - [[#rak7258-micro-gateway-indoor][RAK7258 Micro Gateway (Indoor)]]
-    - [[#rak7268-wisgate-edge-lite-2-new-indoor][RAK7268 WisGate Edge Lite 2 (*NEW,* Indoor)]]
+    - [[#rak7268-wisgate-edge-lite-2-new-indoor][RAK7268 WisGate Edge Lite 2 (*NEW* Indoor)]]
   - [[#not-recommended--no-longer-available][Not Recommended / No longer Available]]
     - [[#lg01-p-iot-gateway][LG01-P IoT Gateway]]
 
@@ -33,7 +33,7 @@ Suppier: [[https://store.rakwireless.com/products/rak7258-micro-gateway][RAK Wir
 Supplier: [[https://www.iot-store.com.au/search?type=product&q=rak7258][IoT Store]]
 - $299 AUD exc. GST - LTE
 
-*** RAK7268 WisGate Edge Lite 2 (*NEW,* Indoor)
+*** RAK7268 WisGate Edge Lite 2 (*NEW* Indoor)
 [[../images/rak-wireless-gateway-rakwireless-wisgate-edge-lite-2-lorawan-gateway.png]]
 
 https://docs.rakwireless.com/Product-Categories/WisGate/RAK7268/Overview/
