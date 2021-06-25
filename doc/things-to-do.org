@@ -12,8 +12,8 @@
     - [[#the-things-network][The Things Network]]
 
 ** Introduction 
-The following are some suggestions for various IoT related  which can be done
-with hardware or software
+The following are some suggestions for various IoT related activities which can
+be done with hardware, software or online.
 
 (This document is a 'Work in Progress'. Suggestions for additions welcome.)
 
