@@ -1,4 +1,4 @@
-[[../../README.org][Top]]
+[[../README.org][Top]]
 -----
 * Things to do (with..)                                                 :TOC_3:
   - [[#introduction][Introduction]]
