@@ -1,6 +1,11 @@
 [[../../README.org][Top]]
+-----
+* LoRaWAN Gateways                                                        :TOC:
+  - [[#introduction][Introduction]]
+  - [[#indoor-gateways][Indoor Gateways]]
+  - [[#not-recommended--no-longer-available][Not Recommended / No longer Available]]
 
-* LoRaWAN Gateways
+** Introduction
 (/Updated Jun 2021)/
 
 The following is a list of commercially LoRaWAN Gateways which are

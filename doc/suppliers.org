@@ -1,6 +1,11 @@
-[[../../README.org][Top]]
+[[../README.org][Top]]
+-----
+* Suppliers                                                               :TOC:
+  - [[#iot-store-online][IoT Store (online)]]
+  - [[#jaycar-electronics][Jaycar Electronics]]
+  - [[#altronics][Altronics]]
+  - [[#aztronics-enfield][Aztronics Enfield]]
 
-* Suppliers
 ** IoT Store (online)
 - [[https://www.iot-store.com.au/][Website]]
 - [[https://www.facebook.com/IoT.Store.Aus/][Facebook]]

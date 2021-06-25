@@ -1,7 +1,11 @@
 [[../../README.org][Top]]
+-----
+* Arduino MLR-WAN-1310                                                    :TOC:
+  - [[#summary][Summary]]
+  - [[#getting-started][Getting Started]]
+  - [[#mechanical-details][Mechanical Details]]
 
-* Arduino MLR-WAN-1310
-
+** Summary
 [[https://store.arduino.cc/usa/mkr-wan-1310][Arduno Store]]
 - $38 USB 
 
@@ -12,5 +16,8 @@ operation.
 
 [[../images/Pinout-MKRwan1310_latest.png]]
 
-*** Getting Started
+** Getting Started
 [[https://www.arduino.cc/en/Guide/MKRWAN1310][Arduino Tutorial]]
+
+** Mechanical Details
+[[../images/mkrwan1310-mounts.png]]
