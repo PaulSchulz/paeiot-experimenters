@@ -20,6 +20,7 @@ currently available.
 [[../images/dragino-gateway-lps8-indoor-lorawan-multichannel-gateway.jpg]]
 
 https://www.dragino.com/products/lora-lorawan-gateway/item/148-lps8.html
+
 Supplier: [[https://iot-store.com.au/products/lps8-indoor-lorawan-multichannel-gateway][IoT Store]]
 - $185 AUD exc. GST
 
@@ -27,9 +28,11 @@ Supplier: [[https://iot-store.com.au/products/lps8-indoor-lorawan-multichannel-g
 [[../images/rak-wireless-gateway-au-915-mhz-rak7258-lorawan-gateway-sx1301-8-channels-with-wifi.png]]
 
 https://store.rakwireless.com/products/rak7258-micro-gateway
+
 Suppier: [[https://store.rakwireless.com/products/rak7258-micro-gateway][RAK Wireless]]
 - $149 USD - Non-LTE
 - $249 USD - LTE
+
 Supplier: [[https://www.iot-store.com.au/search?type=product&q=rak7258][IoT Store]]
 - $299 AUD exc. GST - LTE
 
@@ -37,9 +40,11 @@ Supplier: [[https://www.iot-store.com.au/search?type=product&q=rak7258][IoT Stor
 [[../images/rak-wireless-gateway-rakwireless-wisgate-edge-lite-2-lorawan-gateway.png]]
 
 https://docs.rakwireless.com/Product-Categories/WisGate/RAK7268/Overview/
+
 Supplier: [[https://store.rakwireless.com/collections/wisgate-edge/products/wisgate-edge-lite-2-rak7268-rak7268c][RAK Wireless]]
 - $139 USD - Non-LTE
 - $219 USD - LTE
+
 Supplier: [[https://www.iot-store.com.au/products/rakwireless-wisgate-edge-lite-2-lorawan-gateway?_pos=2&_sid=25a47d7cc&_ss=r][IoT Store]]
 - $229 AUD exc. GST - LTE 
 
