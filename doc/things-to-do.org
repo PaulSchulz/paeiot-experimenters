@@ -5,15 +5,19 @@
   - [[#hardware][Hardware]]
     - [[#arduino][Arduino]]
     - [[#raspberry-pi][Raspberry Pi]]
+    - [[#soldering-and-electronics][Soldering and Electronics]]
+    - [[#circuit-boards][Circuit Boards]]
   - [[#software][Software]]
-    - [[#kicad][kicad]]
-    - [[#fritzing][fritzing]]
+    - [[#kicad][KiCAD]]
+    - [[#fritzing][Fritzing]]
   - [[#online-services][Online Services]]
     - [[#the-things-network][The Things Network]]
 
 ** Introduction 
 The following are some suggestions for various IoT related activities which can
 be done with hardware, software or online.
+
+These activities can be thought of as mini-tutorials and how-to's.
 
 (This document is a 'Work in Progress'. Suggestions for additions welcome.)
 
@@ -33,7 +37,7 @@ be done with hardware, software or online.
 
   Details are in the Blink Sketch mentioned above.  
 
-- Get an Arduino MKR WAN 1310 board to communicate via LoRaWAN
+- Get an Arduino MKR WAN 1310 board to communicate via the LoRaWAN network
 
   This requires an account for "The Things Stack"..
 
@@ -57,9 +61,33 @@ be done with hardware, software or online.
 
 - Play a sound/music on the Raspberry Pi
 
+*** Soldering and Electronics
+- Build a LED flashing circuit.
+
+- Build a LED and Button Shield for Arduino.
+
+- Build an audio amplifier and attach to Raspberry Pi (2.5mm plug).
+
+- Buy and assemble an electronics kit.
+
+*** Circuit Boards
+- Design a circuit board and get it manufactured. Solder it's components and
+  test.
+
 ** Software
-*** kicad
-*** fritzing
+*** KiCAD
+
+- Install [[https://www.kicad.org/][KiCAD]] 
+- Extract mechanical details of the MKR-WAN-1310 (Work in progress)
+
+  The technical design specifications of the MKR-WAN-1310 board have been made
+  available via Eagle design files. Use [[https://www.kicad.org/][KiCAD]] to obtain the details for
+  mechanically mounting the board.
+
+*** Fritzing
+
+- Install fritzing.
+- Import the MKR-WAN-1310 model (Work in progress)
 
 ** Online Services
 *** The Things Network
