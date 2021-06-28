@@ -61,6 +61,11 @@ These activities can be thought of as mini-tutorials and how-to's.
 
 - Play a sound/music on the Raspberry Pi
 
+- Use your Phone to control your Raspberry Pi
+
+  See the [[https://core-electronics.com.au/tutorials/raspcontrol-raspberry-pi.html][Core Electronics Project]]. This project uses the [[https://www.gallinaettore.com/android_apps/raspcontroller/][Raspcontroller]] Android
+  App and can control a Raspberry Pi via SSH.
+
 *** Soldering and Electronics
 - Build a LED flashing circuit.
 
