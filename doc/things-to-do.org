@@ -13,7 +13,7 @@
   - [[#online-services][Online Services]]
     - [[#the-things-network][The Things Network]]
 
-** Introduction 
+** Introduction
 The following are some suggestions for various IoT related activities which can
 be done with hardware, software or online.
 

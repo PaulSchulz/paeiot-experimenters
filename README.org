@@ -1,7 +1,6 @@
 * Port Adelaide Enfield IoT Experimenters                                 :TOC:
   - [[#summary][Summary]]
   - [[#introduction][Introduction]]
-  - [[#group-interests][Group Interests]]
   - [[#documentation][Documentation]]
 
 ** Summary
@@ -31,24 +30,8 @@ Everyone is welcome to contribute to this shared repository. I welcome
 suggestions, and especially 'pull requests'. (Send me a message if you need me
 to explain what this is or how to send me one.)
 
-** Group Interests
-Specific interest has been expressed in the following types of projects:
-- Monitoring a storm-water system with a pump, with an overflow sensor
-- Medical alert (with fall detector and location monitoring)
-- Low cost air quality monitor and sensor
-- Minecraft server on a Raspberry Pi
-- Public interactive art project with sound and light
-- Micro weather monitoring - rain and wind speed, rain bursts etc.
-- Solutions for gate and water monitoring
-- Bicycle trainer sensor
-- Chicken coop/run camera
-
-In addition, interest was expressed in
-- Machine learning and data processing
-- Computer vision applications (using, for example the Jetson Nano Dev. Kit)
-- Programming and developing applications
-
 ** Documentation
 - [[doc/suppliers.org][Suppliers]]
 - [[doc/hardware/][IoT Hardware]]
 - [[doc/things-to-do.org][Things to do]]
+- [[doc/group-interests.org][Group Interests]]
