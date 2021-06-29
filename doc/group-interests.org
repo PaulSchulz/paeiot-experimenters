@@ -2,7 +2,7 @@
 -----
 * Group Interests                                                       :TOC_3:
   - [[#introduction][Introduction]]
-  - [[#group-interests][Group Interests]]
+  - [[#interests][Interests]]
 
 ** Introduction
 The following are various projects and topics that members are interested in.
@@ -10,7 +10,7 @@ The following are various projects and topics that members are interested in.
 At some stage, we will include write-ups of the various projects that have been
 worked on.
 
-** Group Interests
+** Interests
 Specific interest has been expressed in the following types of projects:
 - Monitoring a storm-water system with a pump, with an overflow sensor
 - Medical alert (with fall detector and location monitoring)
