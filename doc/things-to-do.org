@@ -66,6 +66,12 @@ These activities can be thought of as mini-tutorials and how-to's.
   See the [[https://core-electronics.com.au/tutorials/raspcontrol-raspberry-pi.html][Core Electronics Project]]. This project uses the [[https://www.gallinaettore.com/android_apps/raspcontroller/][Raspcontroller]] Android
   App and can control a Raspberry Pi via SSH.
 
+- Build a "Smart Doorbell" based on a Pi Zero
+
+  With similar functionality to the Amazon Ring doorbell, it is possible to
+  build a [[https://buzzert.net/posts/2021-05-09-doorbell][DIY Smart Doorbell]] with a some readily available parts, that won't
+  send your data to someone else across the internet.
+
 *** Soldering and Electronics
 - Build a LED flashing circuit.
 
