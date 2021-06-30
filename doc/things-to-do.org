@@ -82,12 +82,11 @@ These activities can be thought of as mini-tutorials and how-to's.
 - Buy and assemble an electronics kit.
 
 - Design your own circuit board and build and test it on a breadboard. Transfer
-  and solder to design onto a circuit board ([[https://www.adafruit.com/product/1609][half-size]] or [[https://www.adafruit.com/product/1609][full-size]]] and mount
+  and solder to design onto a circuit board ([[https://www.adafruit.com/product/1609][half-size]] or [[https://www.adafruit.com/product/1606][full-size]]] and mount
   in a box.
 
 *** Circuit Boards
-- Design a circuit board and get it manufactured. Solder it's components and
-  test.
+- Design a printed circuit board and get it manufactured. Build and test.
 
 ** Software
 *** KiCAD
