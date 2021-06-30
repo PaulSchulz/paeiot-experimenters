@@ -81,6 +81,10 @@ These activities can be thought of as mini-tutorials and how-to's.
 
 - Buy and assemble an electronics kit.
 
+- Design your own circuit board and build and test it on a breadboard. Transfer
+  and solder to design onto a circuit board ([[https://www.adafruit.com/product/1609][half-size]] or [[https://www.adafruit.com/product/1609][full-size]]] and mount
+  in a box.
+
 *** Circuit Boards
 - Design a circuit board and get it manufactured. Solder it's components and
   test.
@@ -109,4 +113,3 @@ These activities can be thought of as mini-tutorials and how-to's.
 - Create a application with The Things Network
 
 - Register a LoRaWAN device
-
