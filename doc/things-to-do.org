@@ -72,6 +72,12 @@ These activities can be thought of as mini-tutorials and how-to's.
   build a [[https://buzzert.net/posts/2021-05-09-doorbell][DIY Smart Doorbell]] with a some readily available parts, that won't
   send your data to someone else across the internet.
 
+- Build an Internet of Dings device
+
+  See the [[https://www.youtube.com/watch?v=o5wOzNzShrA][Youtube Video]] on how Jeff Geerling built an internet powered counter
+  (call) bell, which will sound in response to some an event. Project
+  files are available on [[https://github.com/geerlingguy/pi-bell-slapper][Github]].
+
 *** Soldering and Electronics
 - Build a LED flashing circuit.
 
