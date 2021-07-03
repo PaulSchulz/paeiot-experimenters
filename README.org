@@ -14,8 +14,8 @@ at the Greenacres Library on the *3rd Sunday of the Month* to discuss and learn
 about Internet of Things based projects, and learn from each other while doing
 and building interesting things.
 
-More details about the group and some of the projects being worked on, can found
-on the [[https://stemlibrary.space/iot/][STEM Library Website]].
+More details about the group, *contact details* and some of the projects being
+worked on, can found on the [[https://stemlibrary.space/iot-experimenters][STEM Library Website]].
 
 Anyone is welcome to join the group. There is a [[https://iotexperimenter.slack.com/][Slack Channel]] for online discussion.
 
