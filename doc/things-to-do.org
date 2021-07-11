@@ -59,6 +59,11 @@ These activities can be thought of as mini-tutorials and how-to's.
 
 - Connect NodeRED to The Things Network via MQTT
 
+- Put it all together - Raspberry Pi + MQTT + Node-RED + InfluxDB + Grafana
+
+  See the following [[https://www.rs-online.com/designspark/raspberry-pi-4-personal-datacentre-part-3-a-self-hosted-iot-data-platform][blogpost]] about automating the installation of the complete
+  IoT software stack using Ansible and docker.
+
 - Play a sound/music on the Raspberry Pi
 
 - Use your Phone to control your Raspberry Pi
@@ -77,6 +82,10 @@ These activities can be thought of as mini-tutorials and how-to's.
   See the [[https://www.youtube.com/watch?v=o5wOzNzShrA][Youtube Video]] on how Jeff Geerling built an internet powered counter
   (call) bell, which will sound in response to some an event. Project
   files are available on [[https://github.com/geerlingguy/pi-bell-slapper][Github]].
+
+- Build a Wifi based remote control for an electric gate opener or garage door.
+
+  See: https://hackaday.io/project/21074-esp8266-internet-controlled-relay-garage-opener
 
 *** Soldering and Electronics
 - Build a LED flashing circuit.
