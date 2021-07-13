@@ -7,11 +7,7 @@
     - [[#raspberry-pi][Raspberry Pi]]
     - [[#soldering-and-electronics][Soldering and Electronics]]
     - [[#circuit-boards][Circuit Boards]]
-  - [[#software][Software]]
-    - [[#kicad][KiCAD]]
-    - [[#fritzing][Fritzing]]
-  - [[#online-services][Online Services]]
-    - [[#the-things-network][The Things Network]]
+    - [[#radio-and-antennas][Radio and Antennas]]
 
 ** Introduction
 The following are some suggestions for various IoT related activities which can
@@ -103,27 +99,6 @@ These activities can be thought of as mini-tutorials and how-to's.
 *** Circuit Boards
 - Design a printed circuit board and get it manufactured. Build and test.
 
-** Software
-*** KiCAD
-
-- Install [[https://www.kicad.org/][KiCAD]] 
-- Extract mechanical details of the MKR-WAN-1310 (Work in progress)
-
-  The technical design specifications of the MKR-WAN-1310 board have been made
-  available via Eagle design files. Use [[https://www.kicad.org/][KiCAD]] to obtain the details for
-  mechanically mounting the board.
-
-*** Fritzing
-
-- Install [[https://fritzing.org/][fritzing]].
-- Import the MKR-WAN-1310 model (Work in progress)
-
-** Online Services
-*** The Things Network
-- Register with [[https://id.thethingsnetwork.org/]["The Things ID"]] system to create an account
-
-  This is required for using [[https://www.thethingsnetwork.org/][The Things Network]]
-
-- Create a application with The Things Network
-
-- Register a LoRaWAN device
+*** Radio and Antennas
+- Construct an antenna and evaluate it with the NanoVNA (Vector Network
+  Analyser).
