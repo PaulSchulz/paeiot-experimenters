@@ -13,6 +13,9 @@
     - [[#fritzing][Fritzing]]
   - [[#online-services][Online Services]]
     - [[#the-things-network][The Things Network]]
+  - [[#programming][Programming]]
+    - [[#python][Python]]
+    - [[#opencv][OpenCV]]
 
 ** Introduction
 The following are some suggestions for various IoT related activities which can
@@ -133,4 +136,12 @@ These activities can be thought of as mini-tutorials and how-to's.
 
 - Register a LoRaWAN device
 
-  
+** Programming
+
+*** Python
+
+*** OpenCV
+
+Detect objects in a video using OpenCV and Python and do something with that
+information. A youtube tutorial can be found [[https://www.youtube.com/watch?v=WymCpVUPWQ4][here]].
+
