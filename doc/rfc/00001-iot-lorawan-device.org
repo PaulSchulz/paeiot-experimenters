@@ -10,11 +10,12 @@
 ** Summary
 |----------+------------------------------------------------------|
 | Author   | Paul Schulz <paul@mawsonlakes.org>                   |
-| Date     | Wed, 23 Jun 2021                                     |
+| Date     | Thu, 5 Aug 2021                                      |
 | Keywords | LoRaWAN, Hardware, Sensor, Kit, Battery, Solar Power |
-| Revision | v1                                                   |
+| Revision | v1.1                                                 |
 | Status   | Draft                                                |
 |----------+------------------------------------------------------|
+(See git log for the change log.)
 
 ** Introduction
 
@@ -23,6 +24,8 @@ capable device which can be easily constructed from readily available parts. The
 aim of this device is to be a standard unit which can be used (with small
 modifications) as the basis for constructing a large range of IoT devices
 suitable for use by the IoT Experimenters group and beyond.
+
+Suggested Name: PAEIoT Sensor One
 
 Things to consider:
 - Cost
@@ -62,6 +65,7 @@ The kit will produce a hardware sensor unit which will:
 - LED Feedback (display downloaded status from LoRaWA Network)
 
 ** Component Candidates
+
 *** Microprocessor Board
 **** Arduino MKR WAN 1310 (current preferred option)
 This board initially appears to support all of the specification requirements.
@@ -89,6 +93,12 @@ This board initially appears to support all of the specification requirements.
 
 *** Low Power MKR WAN 1310 IoT Sensor Project
 - Webpage: [[https://create.arduino.cc/projecthub/andreas_waldherr/mkr-wan-1310-iot-operating-at-0-92ma-879793][Arduino Project]]
-
 Good detailed description of a LoRaWAN Sensor, including programming.
-- Uses CBOR data encoding (RFC 8949) [[https://cbor.io/][Concose Binary Object Representation]]
+
+*** Arduino Low Power Library
+
+*** Data Encoding
+CBOR data encoding (RFC 8949)
+- [[https://cbor.io/][Concose Binary Object Representation]] - [[https://cbor.io]]
+Cayenne Low Power Payload (CayenneLPP)
+- [[https://www.thethingsindustries.com/docs/integrations/payload-formatters/cayenne/]]
