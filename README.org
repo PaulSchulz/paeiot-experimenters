@@ -35,3 +35,4 @@ to explain what this is or how to send me one.)
 - [[doc/hardware/][IoT Hardware]]
 - [[doc/things-to-do.org][Things to do]]
 - [[doc/group-interests.org][Group Interests]]
+- [[doc/rfc/index.org][Request For Comment]] (Discussion Documents)
