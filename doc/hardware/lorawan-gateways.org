@@ -18,7 +18,7 @@ currently available.
 
 ** Indoor Gateways
 *** Arduino PRO Gateway for LoRa (*NEW* Indoor)
-[[../images/arduino-pro-gateway-image.svg]]
+[[../images/arduino-pro-gateway-image.png]]
 
 https://www.arduino.cc/pro/hardware/product/lora-gateway
 
