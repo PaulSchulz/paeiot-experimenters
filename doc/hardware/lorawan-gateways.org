@@ -3,6 +3,7 @@
 * LoRaWAN Gateways                                                        :TOC_3:
   - [[#introduction][Introduction]]
   - [[#indoor-gateways][Indoor Gateways]]
+    - [[#arduino-pro-gateway-for-lora-internal-enclosure][Arduino PRO Gateway for LoRa (internal enclosure)]]
     - [[#lps8-indoor-lorawan-gateway][LPS8 Indoor LoRaWAN Gateway]]
     - [[#rak7258-micro-gateway-indoor][RAK7258 Micro Gateway (Indoor)]]
     - [[#rak7268-wisgate-edge-lite-2-new-indoor][RAK7268 WisGate Edge Lite 2 (*NEW* Indoor)]]
@@ -16,6 +17,16 @@ The following is a list of commercially LoRaWAN Gateways which are
 currently available.
 
 ** Indoor Gateways
+*** Arduino PRO Gateway for LoRa (internal enclosure)
+[[../images/arduino-pro-gateway-image.svg]]
+
+https://www.arduino.cc/pro/hardware/product/lora-gateway
+
+Supplier: [[https://www.arduino.cc][Arduino]]
+- Price: (please inquire - not yet listed in store)
+
+[[../images/arduino-pro-gateway-black.svg]]
+
 *** LPS8 Indoor LoRaWAN Gateway
 [[../images/dragino-gateway-lps8-indoor-lorawan-multichannel-gateway.jpg]]
 
@@ -35,6 +46,8 @@ Suppier: [[https://store.rakwireless.com/products/rak7258-micro-gateway][RAK Wir
 
 Supplier: [[https://www.iot-store.com.au/search?type=product&q=rak7258][IoT Store]]
 - $299 AUD exc. GST - LTE
+
+Experience: The group has one of these units and one member also has one.
 
 *** RAK7268 WisGate Edge Lite 2 (*NEW* Indoor)
 [[../images/rak-wireless-gateway-rakwireless-wisgate-edge-lite-2-lorawan-gateway.png]]
