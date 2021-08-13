@@ -1,0 +1,15 @@
+* Request for Comment                                                     :TOC:
+  - [[#introduction][Introduction]]
+  - [[#iot-lorawan-device][IoT LoRaWAN Device]]
+
+** Introduction
+
+These documents are written as discussion papers for review and comment, and are
+useful for both the initial development of a project and as part of the final
+documentation.
+
+** IoT LoRaWAN Device
+
+- File: [[00001-iot-lorawan-device.org]]
+- Summary: Specification of a standard LoRaWAN Device (and Kit) which can be
+  used by the PAE IoT Experimenters Group (PAEIoT Sensor One).
