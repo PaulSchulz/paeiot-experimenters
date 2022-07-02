@@ -1,0 +1,87 @@
+* Microclimate - 2 July 2022
+Discussion this Week and Status Catchup, mostly from Slack.
+
+Next Meeting of IoT Experimenters - Sun, 17 Jul 
+- Jon L - is asking for some Arduino Help
+
+** Discussions
+
+*** Solar Panel Bettery Arrangement
+Robert Hart, Damien, Presser, Randall
+
+*** Watchdog libraries for MKRWAN1310 Board 
+Damian Presser, Paul Schulz
+- https://www.arduino.cc/reference/en/libraries/adafruit-sleepydog-library/
+- https://github.com/SodaqMoja/Sodaq_wdt
+
+*** Cortex Processor Sleep Modes
+Clove Goldsmith
+
+*** MKR1310 Battey Charging Chip - BQ24195 PMIC
+Randall
+Arduino Library
+- https://github.com/arduino-libraries/Arduino_BQ24195 
+
+*** Air Quality Monitoring Setup
+Wayne Peacock
+
+Photos of home system AQ monitor based using and ESP8266. Arduino code can be
+made available.
+
+Based on the SCD30 CO2 sensor, a SGP30 VOC/eCO2 sensor, a SHT31 or (SHT15)
+Temperature and Humidity sensor and the Honeywell HPMA115S0 PM2.5 sensor.
+
+"All the sensors have very reliable apart from the original Honeywell HPMA115S0
+PM2.5 sensors. These would fail for me after about 2 years. Honeywell have since
+fixed the issues and it's reported to have a life of 10 years now. The SCD30
+work well indoors with Automatic Self-Calibration (ASC), however this requires
+exposure to fresh outside air periodically. There is a Forced Re-calibration
+mode (FRC) where you expose the sensor to a known concentration and tell the
+sensor what it is. I must try this again and see how this works."
+
+*** Science Week Grant Recipients
+Robert Hart
+
+Message from our sponsor (Rona). Swag available for projects. Need reply by 17
+July.
+- Caps (max of 10)
+- Short sleeved T shirts (max of 12)
+- A very limited number of long sleeved T shirts
+- Temporary tattoos (ample available)
+- Button badges (ample available)
+
+*** Issues with UNO Boards
+Jon L, Mark, mazza
+
+Problem connecting to Arduino Board. Resolved by replacing Ardino UNO
+
+*** Protocol for LoRaWAN Messages - CayenneLPP
+Clive Goldsmith, Randall
+
+Arduino Library used for LoRaWAN messages is CayenneLPP
+https://www.thethingsindustries.com/docs/integrations/payload-formatters/cayenne/
+https://www.arduino.cc/reference/en/libraries/cayennelpp/
+
+Used in existing paeiot-sensor-one softare.
+
+*** VPS Investigation
+Robert Hart, Damien Presser
+
+*** Temporary Online Service - Oracle Server
+Damien Presser
+
+- The server has 6GB of RAM.
+- All of the services running with HTTPS
+- Nodered, Influxdb and Grafana
+  - https://nodered.iotdemo.dsp.id.au
+  - https://influxdb.iotdemo.dsp.id.au
+  - https://grafana.iotdemo.dsp.id.au  
+
+Accessing influx from the other two should be the host name "influxdb" and the
+port 8086.
+(Ask on Slack if you needthe login credentials.)
+
+*** Hardware has arrived
+Robert Hart
+
+Robert posted images of the hardware that has arrived.
