@@ -1,0 +1,404 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Sensor Data",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "05e2c16f25d227ef",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "v3/enfieldlibrary-trial-v3@ttn/devices/+/up",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9d78fd1bf504bfec",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 60,
+        "wires": [
+            [
+                "6582feae5b7879b6",
+                "36de7682e2a4d82d"
+            ]
+        ]
+    },
+    {
+        "id": "6582feae5b7879b6",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "36de7682e2a4d82d",
+        "type": "json",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "1b4bf1af7e43bcf4",
+                "f47174b38669cc8c"
+            ]
+        ]
+    },
+    {
+        "id": "1b4bf1af7e43bcf4",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "TTN Decode",
+        "func": "// Decode TTN (v3) Message Format\n\nvar dev_id      = msg.payload.end_device_ids.device_id;\nvar payload_raw = msg.payload.uplink_message.frm_payload;\n\n msg.payload = {   \n    \"dev_id\": dev_id,\n    \"payload_raw\": payload_raw\n  };\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "cddf62ba0de21d5a",
+                "7ee3de2dbc682b6e"
+            ]
+        ]
+    },
+    {
+        "id": "f47174b38669cc8c",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "cddf62ba0de21d5a",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "7ee3de2dbc682b6e",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "payload.dev_id",
+        "property": "payload.dev_id",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "sally",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 160,
+        "y": 300,
+        "wires": [
+            [
+                "26042468d9bb046f"
+            ],
+            [
+                "32d08930d5e45ac8"
+            ]
+        ]
+    },
+    {
+        "id": "dffa8529055ac822",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "26042468d9bb046f",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "sally Decode",
+        "func": "var bucket      = \"paeiot-bucket\"\n\nvar dev_id      = msg.payload.dev_id;\nvar payload_raw = msg.payload.payload_raw;\n\nvar data_buffer = new Buffer(payload_raw, 'base64').toString();\n\nvar data = data_buffer.split(/[ ]+/);\n\nif ((dev_id == \"laura\") || (dev_id == \"sally\")){\n    \n  msg.payload = {   \n    bucket: bucket,\n    data: [{\n      measurement: 'sensor',\n      tags: {\n        \"dev_id\":  dev_id\n        }, \n      fields: {\n        \"temp\":      parseFloat(data[0]),\n        \"humidity\":  parseFloat(data[1])  \n        }\n      }]\n  };\n    \n} else {\n\n  msg.payload = {   \n    bucket: bucket,\n    data: [{\n      measurement: 'sensor',\n      tags: {\n        \"dev_id\":  dev_id\n      }, \n      fields: {\n        \"temp1\":     parseFloat(data[0]),\n        \"humidity1\": parseFloat(data[1]),\n        \"temp2\":     parseFloat(data[2]),\n        \"humidity2\": parseFloat(data[3]),\n        \"temp3\":     parseFloat(data[4]),\n        \"humidity3\": parseFloat(data[5]),\n        \"temp4\":     parseFloat(data[6]),\n        \"humidity4\": parseFloat(data[7])\n        }\n      }]\n    };\n}\n\n// Additional information\nmsg.meta = {\n    \"device_id\":   dev_id,\n    \"packet_size\": data_buffer.length\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 300,
+        "wires": [
+            [
+                "dffa8529055ac822",
+                "1a5becbacdb2e5c2"
+            ]
+        ]
+    },
+    {
+        "id": "32d08930d5e45ac8",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "LPP Pre-Decode",
+        "func": "// LPP Pre-Decode\nvar device_id   = msg.payload.dev_id;\nvar payload_raw = msg.payload.payload_raw;\n\nvar data_buffer_bin = new Buffer(payload_raw, 'base64');\n\n//var data_buffer = new Buffer(payload_raw, 'base64').toString();\n//var data = data_buffer.split(/[ ]+/);\n\nmsg.payload = data_buffer_bin;\nmsg.meta = {\n    \"device_id\": device_id,\n    \"buffer_size\": data_buffer_bin.length\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 400,
+        "wires": [
+            [
+                "9c444c4fbea801a6",
+                "89378946fcfe5093"
+            ]
+        ]
+    },
+    {
+        "id": "9c444c4fbea801a6",
+        "type": "cayennelpp-decoder",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "x": 180,
+        "y": 440,
+        "wires": [
+            [
+                "e7efb1346bc3fd24"
+            ]
+        ]
+    },
+    {
+        "id": "e7efb1346bc3fd24",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "LPP Post-Decode",
+        "func": "// LPP Post-Decode\n\nvar device_id   = msg.meta.device_id;\nvar data        = msg.payload;\n\nmsg.payload = {\n    \"device_id\": device_id,\n    \"data\":      data\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 480,
+        "wires": [
+            [
+                "dca740544de16344",
+                "4e206085524d1940"
+            ]
+        ]
+    },
+    {
+        "id": "2044e6c1e6667597",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Status: (PS) Building flow up again..",
+        "info": "",
+        "x": 1000,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "dca740544de16344",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "89378946fcfe5093",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "1a5becbacdb2e5c2",
+        "type": "Stackhero-InfluxDB-v2-write",
+        "z": "f6f2187d.f17ca8",
+        "server": "2161bf71db3e76aa",
+        "name": "InfluxDB",
+        "x": 560,
+        "y": 320,
+        "wires": [
+            [
+                "dffa8529055ac822"
+            ]
+        ]
+    },
+    {
+        "id": "fef22acb6c4ea91b",
+        "type": "Stackhero-InfluxDB-v2-write",
+        "z": "f6f2187d.f17ca8",
+        "server": "2161bf71db3e76aa",
+        "name": "InfluxDB",
+        "x": 560,
+        "y": 600,
+        "wires": [
+            [
+                "93578e551e90d8db"
+            ]
+        ]
+    },
+    {
+        "id": "4e206085524d1940",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "InfluxDB Encode",
+        "func": "// InfluxDB Encode\nvar bucket    = \"paeiot-bucket\"\n\nvar device_id = msg.payload.device_id;\nvar fields    = msg.payload.data;\n\nmsg.payload = {   \n  bucket: bucket,\n  data: [{\n    measurement: 'sensor',\n    tags: {\n      \"dev_id\":  device_id\n    }, \n    fields: fields\n  }]};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 580,
+        "wires": [
+            [
+                "93578e551e90d8db",
+                "fef22acb6c4ea91b"
+            ]
+        ]
+    },
+    {
+        "id": "93578e551e90d8db",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "8140cdc106efb839",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Some sensors dont use Cayenne data format. PS",
+        "info": "",
+        "x": 500,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "0e106d60b1d958b9",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Status: (PS)Tested -Data being displayed in Grafana",
+        "info": "",
+        "x": 1050,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9d78fd1bf504bfec",
+        "type": "mqtt-broker",
+        "name": "The Things Network (TTN)",
+        "broker": "au1.cloud.thethings.network",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "2161bf71db3e76aa",
+        "type": "Stackhero-InfluxDB-v2-Server",
+        "name": "",
+        "host": "influxdb",
+        "port": "8086",
+        "tls": false
+    }
+]
