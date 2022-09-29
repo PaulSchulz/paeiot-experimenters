@@ -41,7 +41,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
+        "x": 730,
         "y": 60,
         "wires": []
     },
@@ -95,7 +95,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
+        "x": 730,
         "y": 160,
         "wires": []
     },
@@ -112,7 +112,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
+        "x": 730,
         "y": 200,
         "wires": []
     },
@@ -125,62 +125,17 @@
         "propertyType": "msg",
         "rules": [
             {
-                "t": "eq",
-                "v": "sally",
-                "vt": "str"
-            },
-            {
                 "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 2,
+        "outputs": 1,
         "x": 160,
         "y": 300,
         "wires": [
             [
-                "26042468d9bb046f"
-            ],
-            [
                 "32d08930d5e45ac8"
-            ]
-        ]
-    },
-    {
-        "id": "dffa8529055ac822",
-        "type": "debug",
-        "z": "f6f2187d.f17ca8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 710,
-        "y": 300,
-        "wires": []
-    },
-    {
-        "id": "26042468d9bb046f",
-        "type": "function",
-        "z": "f6f2187d.f17ca8",
-        "name": "sally Decode",
-        "func": "var bucket      = \"paeiot-bucket\"\n\nvar dev_id      = msg.payload.dev_id;\nvar payload_raw = msg.payload.payload_raw;\n\nvar data_buffer = new Buffer(payload_raw, 'base64').toString();\n\nvar data = data_buffer.split(/[ ]+/);\n\nif ((dev_id == \"laura\") || (dev_id == \"sally\")){\n    \n  msg.payload = {   \n    bucket: bucket,\n    data: [{\n      measurement: 'sensor',\n      tags: {\n        \"dev_id\":  dev_id\n        }, \n      fields: {\n        \"temp\":      parseFloat(data[0]),\n        \"humidity\":  parseFloat(data[1])  \n        }\n      }]\n  };\n    \n} else {\n\n  msg.payload = {   \n    bucket: bucket,\n    data: [{\n      measurement: 'sensor',\n      tags: {\n        \"dev_id\":  dev_id\n      }, \n      fields: {\n        \"temp1\":     parseFloat(data[0]),\n        \"humidity1\": parseFloat(data[1]),\n        \"temp2\":     parseFloat(data[2]),\n        \"humidity2\": parseFloat(data[3]),\n        \"temp3\":     parseFloat(data[4]),\n        \"humidity3\": parseFloat(data[5]),\n        \"temp4\":     parseFloat(data[6]),\n        \"humidity4\": parseFloat(data[7])\n        }\n      }]\n    };\n}\n\n// Additional information\nmsg.meta = {\n    \"device_id\":   dev_id,\n    \"packet_size\": data_buffer.length\n}\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 390,
-        "y": 300,
-        "wires": [
-            [
-                "dffa8529055ac822",
-                "1a5becbacdb2e5c2"
             ]
         ]
     },
@@ -233,26 +188,17 @@
         "wires": [
             [
                 "dca740544de16344",
-                "4e206085524d1940"
+                "4e206085524d1940",
+                "82aac59f93e315c7"
             ]
         ]
-    },
-    {
-        "id": "2044e6c1e6667597",
-        "type": "comment",
-        "z": "f6f2187d.f17ca8",
-        "name": "Status: (PS) Building flow up again..",
-        "info": "",
-        "x": 1000,
-        "y": 40,
-        "wires": []
     },
     {
         "id": "dca740544de16344",
         "type": "debug",
         "z": "f6f2187d.f17ca8",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -260,7 +206,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
+        "x": 730,
         "y": 480,
         "wires": []
     },
@@ -269,7 +215,7 @@
         "type": "debug",
         "z": "f6f2187d.f17ca8",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -277,23 +223,9 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
+        "x": 730,
         "y": 400,
         "wires": []
-    },
-    {
-        "id": "1a5becbacdb2e5c2",
-        "type": "Stackhero-InfluxDB-v2-write",
-        "z": "f6f2187d.f17ca8",
-        "server": "2161bf71db3e76aa",
-        "name": "InfluxDB",
-        "x": 560,
-        "y": 320,
-        "wires": [
-            [
-                "dffa8529055ac822"
-            ]
-        ]
     },
     {
         "id": "fef22acb6c4ea91b",
@@ -301,8 +233,8 @@
         "z": "f6f2187d.f17ca8",
         "server": "2161bf71db3e76aa",
         "name": "InfluxDB",
-        "x": 560,
-        "y": 600,
+        "x": 580,
+        "y": 560,
         "wires": [
             [
                 "93578e551e90d8db"
@@ -321,16 +253,262 @@
         "finalize": "",
         "libs": [],
         "x": 170,
-        "y": 580,
+        "y": 560,
         "wires": [
             [
-                "93578e551e90d8db",
-                "fef22acb6c4ea91b"
+                "f3f375809bec04c9"
             ]
         ]
     },
     {
         "id": "93578e551e90d8db",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "36a2224c13c53a0e",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "InfluxDB Test Data",
+        "func": "// InfluxDB Test Data\nvar bucket    = \"paeiot-bucket\"\n\nvar device_id = msg.payload.device_id;\nvar fields    = msg.payload.data;\n\ndevice_id = \"test-sensor-2\"\n\nmsg.payload = {   \n  bucket: bucket,\n  data: [{\n    measurement: 'sensor',\n    tags: {\n      \"dev_id\":  device_id\n    }, \n    fields: {\n        \"temp\": 20,\n        \"humidity\": 98.0,\n        \"long\":   -34.8120392,\n        \"lat\":    138.6117257\n        }\n  }]};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 700,
+        "wires": [
+            [
+                "e571f48b4c02545d",
+                "1a4980e516626eec"
+            ]
+        ]
+    },
+    {
+        "id": "e571f48b4c02545d",
+        "type": "Stackhero-InfluxDB-v2-write",
+        "z": "f6f2187d.f17ca8",
+        "server": "2161bf71db3e76aa",
+        "name": "InfluxDB",
+        "x": 580,
+        "y": 720,
+        "wires": [
+            [
+                "1a4980e516626eec"
+            ]
+        ]
+    },
+    {
+        "id": "a959d6030df90627",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 300,
+        "y": 660,
+        "wires": [
+            [
+                "36a2224c13c53a0e"
+            ]
+        ]
+    },
+    {
+        "id": "1a4980e516626eec",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 730,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "f652c4aa7a6b47e4",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "name": "mc-1/down",
+        "topic": "v3/enfieldlibrary-trial-v3@ttn/devices/mc-1/down",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "9d78fd1bf504bfec",
+        "x": 970,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "82aac59f93e315c7",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Extract for Weather Underground",
+        "func": "// Extract for weather underground\n\nvar device_id = msg.payload.device_id;\nvar fields    = msg.payload.data;\n\n// map our sensor id's to Weather Underground parm names\n// https://support.weather.com/s/article/PWS-Upload-Protocol?language=en_US\nconst paeiot_wu=[\n    {\"paeiot\":\"temperature_10\",\"wu\":\"tempf\"},\n    {\"paeiot\":\"temperature_0\",\"wu\":\"tempf\"},\n    {\"paeiot\":\"relative_humidity_10\",\"wu\":\"humidity\"},\n    {\"paeiot\":\"relative_humidity_1\",\"wu\":\"humidity\"}\n];\n\nvar wu_fields ={};\n\nfor (let [key, value] of Object.entries(fields)) {\n    \n    let v=paeiot_wu.find(el => key == el.paeiot);\n    if (v) {\n      if (v.wu === 'tempf') {\n          // Weather underground only accepts temp in Fahrenheit\n          value = value * 9/5 + 32 ; \n      }\n      \n      wu_fields[v.wu]=value;\n    }\n    \n}\n\n\n\nmsg.payload = {\n  device_id:device_id,    \n  data:wu_fields\n};\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "//pwsid= flow.set(\"pwdid\",\"IADELA1576\");// Example ITORON113\t...\n//pwspw= flow.set(\"pwdpw\",\"kAAIJXwQ\");\n//pwsid= flow.get(\"pwdid\");\n//pwspw= flow.get(\"pwdpw\");\n//if(pwsid === undefined)\n//{\n//node.warn(\"Please set PWS id and Password/key  1st!\")\n//return null\n//}\n//msg.payload=\"PWD ID set !\"\n//return msg;",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 800,
+        "wires": [
+            [
+                "7f87b16b294ac88c",
+                "5b15b47de16fe80e"
+            ]
+        ]
+    },
+    {
+        "id": "7f87b16b294ac88c",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "5b15b47de16fe80e",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Create Weather Underground URL",
+        "func": "\n// map of sensor ids to WU keys\n// From Weather Underground -> My Devices\nconst wu_pwdpws=[\n    {\"device_id\":\"mc-1\",\"pwsid\":\"IADELA1576\",\"pwspw\":\"kAAIJXwQ\"},\n    {\"device_id\":\"mc-7\",\"pwsid\":\"IADELA1580\",\"pwspw\":\"J9vhzsBC\"}\n    \n];\n//ID:IADELA1580,KEY:J9vhzsBC\nvar device_id = msg.payload.device_id;\nvar fields    = msg.payload.data;\n\n\n    \nvar wu_account=wu_pwdpws.find(el => device_id == el.device_id);\n// flow ends if no key found that matched sensor_id\nif (! wu_account) {\n    return null;\n}\n\n// flow ends if no valid data was found\nif(Object.keys(fields).length==0) {\n    return null;\n}\npwsid= wu_account.pwsid;\npwspw= wu_account.pwspw;\n\nvar str = \"https://weatherstation.wunderground.com/weatherstation/updateweatherstation.php?ID=\"+pwsid+\"&PASSWORD=\"+pwspw\n\nfor (let [key, value] of Object.entries(fields)) {\n  str+=\"&\"+key+\"=\"+value;\n}\n\nstr += \"&dateutc=now\";\nstr += \"&action=updateraw\";\nstr += \"&realtime=1&rtfreq=30\"\n\nmsg.time=Date.now()\nmsg.url = str\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 880,
+        "wires": [
+            [
+                "6aabcfc19517c944",
+                "6b6d3708552aa50c"
+            ]
+        ]
+    },
+    {
+        "id": "6aabcfc19517c944",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "6b6d3708552aa50c",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "Post to Weather Underground",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 210,
+        "y": 960,
+        "wires": [
+            [
+                "2495451f68632677"
+            ]
+        ]
+    },
+    {
+        "id": "2495451f68632677",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "f3f375809bec04c9",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Location Encode",
+        "func": "// Location Encode\n// - Put this after InfluxDB Encode\n\nvar device_id = msg.payload.data[0].tags.dev_id;\n\nvar locationmap = {\n    \"greenacres\":      { latitude: \"-34.8702334\", longitude: \"138.6371935\" },\n    \"enfield\":         { latitude: \"-34.8532637\", longitude: \"138.6019296\" },\n    \"port\":            { latitude: \"-34.8473859\", longitude: \"138.5033379\" },\n    \"parks\":           { latitude: \"-34.8584538\", longitude: \"138.5575262\" },\n    \n    \"bees\":            { latitude: \"-34.8534449\", longitude: \"138.6017834\" },\n    \n    \"enfield-lab\":     { latitude: \"-34.8532003\", longitude: \"138.6016874\" },\n\n    \"mawsonlakes\":     { latitude: \"-34.8118834\", longitude: \"138.6115541\" },\n    \"mawsonlakes-lab\": { latitude: \"-34.8119827\", longitude: \"138.6115191\" },\n}\n\nvar devicemap = {\n    \"mc-1\":         { location: \"mawsonlakes-lab\" },\n    \"mc-2\":         { location: \"enfield-lab\" },\n    \"mc-3\":         { location: \"parks\" },\n    \"mc-4\":         { location: \"enfield-lab\" },\n    \"mc-5\":         { location: \"enfield\" },\n    \"mc-6\":         { location: \"enfield-lab\" },\n    \"mc-7\":         { location: \"port\" },\n    \"mc-8\":         { location: \"greenacres\" },\n    \"mc-9\":         { location: \"enfield-lab\" },\n    \"sensor-one-1\": { location: \"enfield-lab\" },\n    \"sensor-one-2\": { location: \"enfield-lab\" },\n    \"sensor-one-3\": { location: \"bees\" },\n    \"sensor-one-4\": { location: \"enfield-lab\" },\n    \"sally\":        { location: \"mawsonlakes\" },\n    \"jane\":         { location: \"mawsonlakes-lab\" },\n} \n\n// Lookup lat,long from device_id and add if defined.\n\nif (device_id in devicemap){\n  var devicedata   = devicemap[device_id];\n  var location     = devicedata[\"location\"];\n\n  msg.payload.data[0].tags.location  = location;  \n  \n  if (location in locationmap) {\n    var locationdata = locationmap[location];\n    var latitude     = locationdata[\"latitude\"];\n    var longitude    = locationdata[\"longitude\"];\n\n    msg.payload.data[0].tags.latitude  = latitude;  \n    msg.payload.data[0].tags.longitude = longitude;\n  }\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 560,
+        "wires": [
+            [
+                "fa8d75f28cfacb1b",
+                "fef22acb6c4ea91b"
+            ]
+        ]
+    },
+    {
+        "id": "fa8d75f28cfacb1b",
         "type": "debug",
         "z": "f6f2187d.f17ca8",
         "name": "",
@@ -342,28 +520,127 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
-        "y": 580,
+        "x": 570,
+        "y": 520,
         "wires": []
     },
     {
-        "id": "8140cdc106efb839",
-        "type": "comment",
+        "id": "00220544a04dd6d9",
+        "type": "function",
         "z": "f6f2187d.f17ca8",
-        "name": "Some sensors dont use Cayenne data format. PS",
-        "info": "",
-        "x": 500,
-        "y": 260,
+        "name": "Create UKMO-WOW URL",
+        "func": "\n// map of sensor ids to UKMO-WOW site ides\n// From WOW -> My Sites\nconst wow_sites=[\n    {\"device_id\":\"mc-1\",\"siteid\":\"287ad5c2-4921-ed11-b5cf-0003ff597f35\",\"siteAuthenticationKey\":\"171270\"},\n    //{\"device_id\":\"mc-7\",\"pwsid\":\"IADELA1580\",\"pwspw\":\"J9vhzsBC\"}\n    \n];\n\nvar device_id = msg.payload.device_id;\nvar fields    = msg.payload.data;\n\nvar wow_site=wow_sites.find(el => device_id == el.device_id);\n// flow ends if no key found that matched sensor_id\nif (! wow_site) {\n    return null;\n}\n\n// flow ends if no valid data was found\nif(Object.keys(fields).length==0) {\n    return null;\n}\n//pwsid= wu_account.pwsid;\n//pwspw= wu_account.pwspw;\nfunction addZero(i) {\n  if (i < 10) {i = \"0\" + i}\n  return i;\n}\n\nconst d = new Date();\nlet yyyy=d.getUTCFullYear();\nlet mo= addZero(d.getUTCMonth()+1);\nlet day= addZero(d.getUTCDate());\nlet h = addZero(d.getUTCHours());\nlet m = addZero(d.getUTCMinutes());\nlet s = addZero(d.getUTCSeconds());\nlet utcnow = yyyy+ \"-\" + mo +\"-\" + day+ \"+\" + h + \"%3A\" + m + \"%3A\" + s;\nvar str = \"http://wow.metoffice.gov.uk/automaticreading?siteid=\"+wow_site.siteid+\n  \"&siteAuthenticationKey=\"+wow_site.siteAuthenticationKey+\n  \"&dateutc=\"+utcnow;\n  \n\nfor (let [key, value] of Object.entries(fields)) {\n  str+=\"&\"+key+\"=\"+value;\n}\n\nmsg.time=Date.now();\nmsg.url = str;\nmsg.payload.uurl=str;\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 1080,
+        "wires": [
+            [
+                "4646d4ed7bf690e6",
+                "dfe2680b939591fc"
+            ]
+        ]
+    },
+    {
+        "id": "4646d4ed7bf690e6",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 1080,
         "wires": []
     },
     {
-        "id": "0e106d60b1d958b9",
+        "id": "dfe2680b939591fc",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "Post to UKMO-WOW",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 180,
+        "y": 1180,
+        "wires": [
+            [
+                "2f4e6a114473e31e"
+            ]
+        ]
+    },
+    {
+        "id": "2f4e6a114473e31e",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "8ad04f3ed72035cc",
+        "type": "delay",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 280,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "70df652b7220cbb0",
         "type": "comment",
         "z": "f6f2187d.f17ca8",
-        "name": "Status: (PS)Tested -Data being displayed in Grafana",
-        "info": "",
-        "x": 1050,
-        "y": 80,
+        "name": "UKMO minimum",
+        "info": "UKMO min update interval is 5 minutes but currently the system updates more frequently than that resulting in \"\"The custom error module does not recognize this error.\" error codes\n\nNeed to figure out how to ignore messages too quick. Gate and timer module perhaps?\n",
+        "x": 120,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "1780f28266c7cb4c",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "Version: 1.0.0 (29 Sep 2022)",
+        "info": "Minor updates expected when additional sensors are deployed to capture their locations.\n\nPaul Schulz <paul@mawsonlakes.org>",
+        "x": 960,
+        "y": 60,
         "wires": []
     },
     {
