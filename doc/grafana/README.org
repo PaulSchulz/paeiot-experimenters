@@ -1,0 +1,47 @@
+#+TITLE: Grafana Dashboard Definitions
+
+* Introduction
+Data collected and stored from the environmental sensors in an InfluxDB is
+extracted and displayed in dashboards in Grafana.
+
+The version of Grafana that was uses is:
+
+  Grafana v9.1.8 (3c0c14de5d)
+
+This directory contains the exported definitions of these dashboards, as exported via:
+
+#+begin_example
+"Share (icon)" -> Export
+  with either: Export for sharing externally "on" or "off"" (default)
+#+end_example
+
+Both export versions have been saved. The exported filenames include the UNIX timestamp. The first version is has the external sharing off (default), while the second version has the external sharing on.
+
+The difference in the file format is described below.
+
+** Format
+Grafana provides two options when exporting dashbaords, allowing additional data to be included if the dashbaord is to be shared with a different Grafana instance.
+
+If the dashboard has been exported with the 'sharing externally' option set,
+there are:
+- extra sectios added to the beginning of the file which describes additional
+  dependancies, broken down into:
+  - __inputs;
+  - __element; and
+  - __requirements
+- definition variables which refer to these dependancies.
+
+* Dashboards
+
+The measurement data is saved with the following details 'sensor' (name),
+'location' (name), 'latitude' and 'longitude'
+
+The following Dashboards have been defined:
+
+- Locations :: Plots of environmental data from he selected locations in the specified period.
+- Locations - All :: Plots of environmental and sensor health data from he
+  selected locations in the specified period.
+- Sensors :: Plots of environmental data from the selected sensors in the specified period.
+- Sensors -All :: Plots of environmental data and sensor health datafrom the
+  selected sensors in the specified period.
+- Sensors - Location Map :: A map plot of where data has come from in the specified period.
