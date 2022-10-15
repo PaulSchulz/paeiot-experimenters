@@ -20,16 +20,16 @@ Both export versions have been saved. The exported filenames include the UNIX ti
 The difference in the file format is described below.
 
 ** Format
-Grafana provides two options when exporting dashbaords, allowing additional data to be included if the dashbaord is to be shared with a different Grafana instance.
+Grafana provides two options when exporting dashboards, allowing additional data to be included if the dashboard is to be shared with a different Grafana instance.
 
 If the dashboard has been exported with the 'sharing externally' option set,
 there are:
-- extra sectios added to the beginning of the file which describes additional
-  dependancies, broken down into:
+- extra sections added to the beginning of the file which describes additional
+  dependencies, broken down into:
   - __inputs;
   - __element; and
   - __requirements
-- definition variables which refer to these dependancies.
+- definition variables which refer to these dependencies.
 
 * Dashboards
 
